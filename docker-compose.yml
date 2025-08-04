@@ -2,8 +2,6 @@ services:
   frontend:
     build:
       context: ./frontend
-    volumes:
-      - frontend_dist:/app/dist
     ports:
       - "8443:8443"
     networks:
@@ -16,9 +14,6 @@ services:
       - "8080:8080"
     networks:
       - App
-
-volumes:
-  frontend_dist:
 
 networks:
   App:

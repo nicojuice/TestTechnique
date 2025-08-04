@@ -1,13 +1,21 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "typescript": "^5.9.2"
+  }
 }
+
+
+

@@ -12,11 +12,15 @@ RUN echo "Installation des dépendances..."
 RUN npm install
 RUN npm install fastify
 RUN npm install @fastify/cors
+RUN npm install -D typescript @types/node tsx
+
 
 
 COPY . .
 
+RUN npm run build
+
 EXPOSE 8080
 
 RUN echo "Lancement du Backend"
-CMD ["sh", "-c", "node server.js -d"]
+CMD ["node", "dist/server.js"]
